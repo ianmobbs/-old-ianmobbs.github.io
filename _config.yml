@@ -1,10 +1,10 @@
-title: Researcher
-url: "http://ankitsultana.com"
-baseurl: "/researcher"
+title: Ian Mobbs
+url: "http://ianmobbs.com"
+baseurl: ""
 
 markdown: kramdown
 
-tracking_id: #
+tracking_id: UA-18490636-5
 
 sass:
     style: compressed
