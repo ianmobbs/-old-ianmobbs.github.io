@@ -2,6 +2,8 @@ title: Ian Mobbs
 url: "http://ianmobbs.com"
 baseurl: ""
 
+permalink: /projects/:title
+
 markdown: kramdown
 
 tracking_id: UA-18490636-5

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p>
+<a href="/">Ian Mobbs</a> • {{ page.date | date_to_string }}
+</p>
+<hr />
+<p>
+    {{ content }}
+</p>
+<hr />
+<p>
+{% for tag in page.tags %}
+    <a href="/tag/{{tag}}">{{ tag }}</a>
+    {% if forloop.last != true %}
+    • 
+    {% endif %}
+{% endfor %}
+</p>
