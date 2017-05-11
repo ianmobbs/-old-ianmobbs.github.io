@@ -8,7 +8,7 @@ title: Projects
 			<li>
 				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> - 
 				{% for tag in post.tags %}
-					<a href="/tag/{{tag}}">{{ tag }}</a>
+					{{ tag }}
 					{% if forloop.last != true %}
 					• 
 					{% endif %}
