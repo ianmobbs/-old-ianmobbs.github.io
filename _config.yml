@@ -1,15 +1,16 @@
 title: Ian Mobbs
 author: Ian Mobbs
-url: "http://ianmobbs.com"
-baseurl: ""
+encoding: utf-8
 
 permalink: /projects/:title
-
-markdown: kramdown
-higlighter: rouge
-
-tracking_id: UA-18490636-5
+url: "http://ianmobbs.com"
+baseurl: ""
 
 sass:
     style: compressed
     sass_dir: _sass
+
+markdown: kramdown
+highlighter: rouge
+
+tracking_id: UA-18490636-5
