@@ -6,6 +6,7 @@ baseurl: ""
 permalink: /projects/:title
 
 markdown: kramdown
+higlighter: rouge
 
 tracking_id: UA-18490636-5
 
