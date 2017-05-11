@@ -3,14 +3,14 @@
 <head>
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" href="/favicon.ico?v=1.1">
+    <link rel="shortcut-icon" type="image/ico" href="/favicon.ico?v=1.1">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="{{ site.author }}, {{ site.title }}, {% for tag in page.tags %}{{tag}}, {% endfor %}">
+    
     <meta name="author" content="{{ site.author }}">
-    {% if page.url == "/404.html" %}
-        <meta http-equiv="refresh" content="5; url=/">
-    {% endif %}
+    <meta name="description" content="{% if page.blurb %}{{ page.blurb }}{% else %}Ian Mobbs is a student at The University of Texas at Austin.{% endif %}">
+    <meta name="keywords" content="{{ site.author }}, {{ site.title }}, {% for tag in page.tags %}{{tag}}, {% endfor %}">
 
     {% if page.description %}
         {% assign desc = page.description %}
@@ -24,36 +24,32 @@
         {% assign url = site.url | append: site.baseurl | append: page.url %}
     {% endif %}
 
-    <meta name="description" content="{% if page.blurb %}{{ page.blurb }}{% else %}Ian Mobbs is a student at The University of Texas at Austin.{% endif %}">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css">
-    {% if site.favicon %}
-        <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
-        <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
-    {% endif %}
-    {% if site.twitter_username %}
-        <link rel="author" href="https://twitter.com/{{ site.twitter_username }}">
-    {% endif %}
-    <!-- Facebook Open Graph -->
+
+    <!-- Facebook  -->
     <meta name="og:description" content="{% if page.blurb %}{{ page.blurb }}{% else %}Ian Mobbs is a student at The University of Texas at Austin.{% endif %}">
     <meta name="og:title" content="{{ site.title }}">
     <meta name="og:url" content="{{ url }}">
     <meta name="og:type" content="article">
-    {% if site.og_image %}
-        <meta name="og:image" content="{{ site.og_image }}">
-    {% endif %}
-    {% if site.facebook_id %}
-        <meta name="fb:admins" content="{{ site.facebook_id }}">
-    {% endif %}
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ site.title }}">
     <meta name="twitter:description" content="{% if page.blurb %}{{ page.blurb }}{% else %}Ian Mobbs is a student at The University of Texas at Austin.{% endif %}">
     <meta name="twitter:url" content="{{ url }}">
-    {% if site.twitter_image %}
-        <meta name="twitter:image" content="{{ site.twitter_image }}">
-    {% endif %}
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-18490636-5', 'auto');
+    ga('send', 'pageview');
+    </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -85,14 +81,4 @@
             </div>
         {% endif %}
     </div>
-    {% if site.tracking_id %}
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', '{{ site.tracking_id }}', 'auto');
-          ga('send', 'pageview');
-        </script>
-    {% endif %}
 </body>
