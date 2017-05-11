@@ -9,12 +9,6 @@ tags:
     - scikit-learn
 ---
 
-# THIS IS A WORK IN PROGRESS
-# THIS IS A WORK IN PROGRESS
-# THIS IS A WORK IN PROGRESS
-# THIS IS A WORK IN PROGRESS
-# THIS IS A WORK IN PROGRESS
-
 ## Introduction
 
 Originally written for my Advanced Analytics Programming class at The University of Texas at Austin, this article is meant to quickly show some neat things Machine Learning can provide on the wonderful world of wine. This article assumes a basic knowledge of Machine Leaning, but feel free to browse through the insights.
@@ -376,8 +370,9 @@ What are our key takeaways from this?
 * White wine makers should focus on **increasing density** (but not the point of red wine), **decreasing volatile acidity**, and **increasing alcohol content**.
 * Who likes white wine anyway?
 
-# Logistic Regression
+# The rest of this article is a work in progress!
 
+## Logistic Regression
 
 ```python
 # Determine color from other traits
