@@ -5,23 +5,24 @@ title: Ian Mobbs
 
 ## Education
 
-The University of Texas at Austin (May 2018)  
+**The University of Texas at Austin**  
 Management Information Systems  
-Computer Science
+Computer Science  
+B.B.A., May 2018  
 
 ## Experience
 
-Software Engineering Intern — Capital One  
-<span class="date">June 2017 - August 2017</span>  
+**Software Engineering Intern — Capital One**  
+June 2017 - August 2017  
 
-Senior IT Student Associate — The University of Texas at Austin  
-<span class="date">September 2015 - December 2016<span>
+**Senior IT Student Associate — The University of Texas at Austin**  
+September 2015 - December 2016
 
-Web Developer - KVRX Austin  
-<span class="date">July 2016 - December 2016</span>  
+**Web Developer - KVRX Austin**  
+July 2016 - December 2016  
 
-Business Development and Marketing Intern — Do512  
-<span class="date">December 2015 - May 2016</span>  
+**Business Development and Marketing Intern — Do512**  
+December 2015 - May 2016  
 
 <!--
 ## Coursework
