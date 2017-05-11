@@ -12,16 +12,16 @@ B.B.A., May 2018
 
 ## Experience
 
-**Software Engineering Intern — Capital One**  
+**Capital One — Software Engineering Intern**  
 June 2017 - August 2017  
 
-**Senior IT Student Associate — The University of Texas at Austin**  
+**The University of Texas at Austin — Senior IT Student Associate**  
 September 2015 - December 2016
 
-**Web Developer - KVRX Austin**  
+**KVRX Austin — Web Developer**  
 July 2016 - December 2016  
 
-**Business Development and Marketing Intern — Do512**  
+**Do512 — Business Development and Marketing Intern**  
 December 2015 - May 2016  
 
 <!--
