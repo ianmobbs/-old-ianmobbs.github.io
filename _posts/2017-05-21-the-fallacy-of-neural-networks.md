@@ -247,7 +247,7 @@ In order to demonstrate that other machine learning techniques can be just as po
 
 > For any crime, can we predict the race of the perpetrator based on other information?
 
-Once you've identified your problems, the folks over at `scitkit-learn` have created an [excellent cheatsheet](http://scikit-learn.org/stable/tutorial/machine_learning_map/) on how to pick an algorithm to use:
+Once you've identified your problems, the folks over at `scikit-learn` have created an [excellent cheatsheet](http://scikit-learn.org/stable/tutorial/machine_learning_map/) on how to pick an algorithm to use:
 
 ![Pick an algorithm!](/assets/fnn/pick an algo.png)
 
@@ -332,7 +332,7 @@ print("SGDClassifier Accuracy:", accuracy_score(predictions, y_test))
 
 ### Neural Network
 
-In order for the neural network (which you can read about [here](http://scikit-learn.org/stable/modules/neural_networks_supervised.html#regression)) to train in a somewhat timely manner on my Macbook Pro, I had to stifle it's capabilities significantly by adjusting the size of it's hidden layers and the number of iterations. Even after these customizations though, training took 245 seconds - around **14** times longer than the SGDClassifer, with only a **4.5%** accuracy increase.
+In order for the neural network (which you can read about [here](http://scikit-learn.org/stable/modules/neural_networks_supervised.html#regression)) to train in a somewhat timely manner on my Macbook Pro, I had to stifle it's capabilities significantly by adjusting the size of it's hidden layers and the number of iterations. Even after these customizations though, training took 387 seconds - around **22.7** times longer than the SGDClassifer, with only a **4.5%** accuracy increase.
 
 
 ```python
