@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: The Fallacy of Neural Networks
+title: Neural Networks are Overrated
 blurb: Neural networks are overrrated. Let's find out why.
 tags:
     - python
