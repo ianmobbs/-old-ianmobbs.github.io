@@ -361,4 +361,10 @@ print("Neural Network Accuracy:", accuracy_score(predictions, y_test))
 
 It's clear that the SGD Classifier outperformed the Neural Network. I hope this quick article goes to show that there's more to Machine Learning than neural networks, and that when solving an ML problem, all options should be considered. If you're looking for a practical introduction to Machine Learning, the book I used (that I highly recommend) is [Müeller](http://amueller.github.io/) and [Guido](http://www.oreilly.com/pub/au/6105)'s ["Introduction to Machine Learning with Python: A Guide for Data Scientists"](https://smile.amazon.com/Introduction-Machine-Learning-Python-Scientists/dp/1449369413/ref=sr_1_4?ie=UTF8&qid=1495839877&sr=8-4&keywords=machine+learning+python).
 
-If you have any feedback, please let me know! You can find my web presence on my [website](http://ianmobbs.com).
+## Addendum
+
+Andreas Mueller commented on the version of my article hosted on [The Practical Dev](https://dev.to/mobbsdev/neural-networks-are-overrated), and his comment was very insightful - I'd like to share it here:
+
+> Cool article and an important point. Thanks for recommending our book! Neural networks are certainly not a cure-all, though it's tricky business to compare different algorithms on the same data because there are so many hyper parameters. For example increasing the number of iterations or using the sag sober solver might have improved the linear model, but take longer. Similarly a larger hidden layer (or changing any of the other tuning parameters) might have positive effects for the neural network.
+> I think the main takeaway should be: never try neural networks first. Start with something simple and try complex models later if the gain in accuracy justifies for the added complexity in your application.
+
