@@ -8,7 +8,9 @@ title: Projects
 		{% if post.published %}
 			<li>
 				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-				{% if post.project %}
+				{% if post.type %}
+				<b>({{post.type}})</b>
+				{% else if post.project %}
 				<b>(project)</b>
 				{% else %}
 				<b>(article)</b>
