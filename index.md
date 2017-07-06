@@ -47,10 +47,14 @@ MAN 338 - Learn Startup Essentials
 -->
 ## Connect  
 
-<a href="mailto:hello@ianmobbs.com" target="_blank">Email</a>  
+<a href="mailto:ianmobbs@gmail.com" target="_blank">Email</a>  
 <a href="https://twitter.com/mobbsdev" target="_blank">Twitter</a>  
 <a href="https://linkedin.com/in/ianmobbs" target="_blank">LinkedIn</a>  
 <a href="https://github.com/ianmobbs" target="_blank">Github</a>  
   
 <br />
 <br />
+
+<!--
+Howdy
+-->
