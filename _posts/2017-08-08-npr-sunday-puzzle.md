@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 type: article
 title: Brute-forcing the NPR Sunday Puzzle
 blurb: Does the NPR Sunday puzzle really require inherent cleverness, or just the ability to code? Are they one and the same?
