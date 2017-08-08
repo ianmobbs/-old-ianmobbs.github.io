@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 type: article
 title: Brute-forcing the NPR Sunday Puzzle
 blurb: Does the NPR Sunday puzzle really require inherent cleverness, or just the ability to code? Are they one and the same?
@@ -87,7 +87,16 @@ for book in books:
 After cleaning up the OpenLibrary works dump a bit, I used it as input for the script. A few seconds later, the results were in! Possible titles were:
 
 ```
-TODO
+Miami Indians - Miami, IN
+Lake Michigan - Lake, MI
+Raymond Hains - Raymond, ME
+Moon Virginia - Moon, VA
+Joseph Crugon - Joseph, OR
+Eugene Onegin - Eugene, OR
+Richmond Whig - Richmond, OH
+Columbus Ohio - Columbus, OH
+Garrison town - Garrison, IA
+Joseph Gregor - Joseph, OR
 ```
 
 A little Google-fu (just to confirm which title was a classic book) later and we had the answer - [Eugene Onegin](https://en.wikipedia.org/wiki/Eugene_Onegin), a piece of classic Russian literate published in serial form between 1825 and 1832. Onegin is only two letters away from the state of Oregon. We did it!
