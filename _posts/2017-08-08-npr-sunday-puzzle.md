@@ -87,16 +87,44 @@ for book in books:
 After cleaning up the OpenLibrary works dump a bit, I used it as input for the script. A few seconds later, the results were in! Possible titles were:
 
 ```
-Miami Indians - Miami, IN
-Lake Michigan - Lake, MI
-Raymond Hains - Raymond, ME
-Moon Virginia - Moon, VA
-Joseph Crugon - Joseph, OR
-Eugene Onegin - Eugene, OR
-Richmond Whig - Richmond, OH
-Columbus Ohio - Columbus, OH
-Garrison town - Garrison, IA
-Joseph Gregor - Joseph, OR
+Vergine Madre Maine
+Painful Tears Texas
+Inuit Indians Indiana
+Settling Down Iowa
+Savage Dragon Oregon
+Problem Texts Texas
+...(1259 more lines)
+```
+
+Over 1200 matches? There was no way I was going to parse through all that by hand.
+
+## How can we trim this down?
+
+This was a great start, but we needed to trim this down to a usable amount of books. For this I used the great Python library [pyzipcode](https://github.com/fdintino/pyzipcode), which let me look up cities and states by zip code. If a city/state combo doesn't have a zip code, it's not the answer. I saved the book titles into a textfile and wrote a new script:
+
+```python
+for book in potential_books:
+	# Book format: "Painful Tears Texas"
+	city, state = book.split(' ')[0], book.split(' ')[2]
+	results = zcdb.find_zip(city=city, state=state)
+	if results is not None:
+		print(title + ' - ' + city + ', ' + state)
+```
+<sup>Note: `pyzipcode` accepts a state abbreviation, not just a state, so I did do some preprocessing that isn't shown here</sup>
+
+This led to this (much more reasonable) output:
+
+```
+Miami Indians - Miami, Indiana
+Lake Michigan - Lake, Michigan
+Raymond Hains - Raymond, Maine
+Moon Virginia - Moon, Virginia
+Joseph Crugon - Joseph, Oregon
+Eugene Onegin - Eugene, Oregon
+Richmond Whig - Richmond, Ohio
+Columbus Ohio - Columbus, Ohio
+Garrison Town - Garrison, Iowa
+Joseph Gregor - Joseph, Oregon
 ```
 
 A little Google-fu (just to confirm which title was a classic book) later and we had the answer - [Eugene Onegin](https://en.wikipedia.org/wiki/Eugene_Onegin), a piece of classic Russian literate published in serial form between 1825 and 1832. Onegin is only two letters away from the state of Oregon. We did it!
@@ -119,4 +147,4 @@ def word_to_state(word):
 	return False
 ```
 
-I initially thought set comparisons would be the way to go, but for this challenge, **the order of the letters matters**. The challenge answer of Onegin would've failed using set comparisons, because we're changing the letter 'r' to a letter that's already in the word 'Oregon'. While there are definitely improvments to be made, those are for another day.
+I initially thought set comparisons would be the way to go, but for this challenge, **the order of the letters matters**. The challenge answer of Onegin would've failed using set comparisons, because we're changing the letter 'r' to a letter that's already in the word 'Oregon'. While there are definitely improvments to be made, those are for another day. In retrospect, my initial function didn't even handle this properly - just look at some of the output! Fortunately, I was working on such a small scale it didn't matter too much.
