@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+type: article
 project: false
 title: Neural Networks are Overrated
 blurb: Neural networks are overrated. Let's find out why.

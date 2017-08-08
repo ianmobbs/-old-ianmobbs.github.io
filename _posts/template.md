@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+type: type
 project: true
 title: Title
 blurb: Description
