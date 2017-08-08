@@ -4,6 +4,7 @@ published: true
 type: article
 title: Brute-forcing the NPR Sunday Puzzle
 blurb: Does the NPR Sunday puzzle really require inherent cleverness, or just the ability to code? Are they one and the same?
+image: http://media.npr.org/assets/img/2017/07/14/sundaypuzzle-widecrop_wide-8b3d72cd8e503c6fad20ce59a69452b623a792b6-s1600-c85.jpg
 tags:
     - python
     - openlibrary

@@ -35,10 +35,23 @@
     <meta name="og:type" content="article">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:description" content="{% if page.blurb %}{{ page.blurb }}{% else %}Ian Mobbs is a student at The University of Texas at Austin.{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mobbsdev">
+    <meta name="twitter:creator" content="@mobbsdev">
     <meta name="twitter:url" content="{{ url }}">
+    {% if page.title %}
+        <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+        <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+
+    {% if page.blurb %}
+        <meta name="twitter:description" content="{{ page.blurb }}">
+    {% endif %}
+    
+    {% if page.image %}
+        <meta name="twitter:image:src" content="{{ page.image }}">
+    {% endif %}
 
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
