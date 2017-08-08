@@ -2,7 +2,7 @@
 layout: post
 published: true
 type: article
-title: Brute-forcing the NPR Sunday Puzzle - and getting it right!
+title: Brute-forcing the NPR Sunday Puzzle
 blurb: Does the NPR Sunday puzzle really require inherent cleverness, or just the ability to code? Are they one and the same?
 tags:
     - python
@@ -12,7 +12,7 @@ tags:
 
 ## Inspiration
 
-A couple weeks ago, I was looking at the [NPR Sunday Puzzle](http://www.npr.org/2017/07/16/537225382/sunday-puzzle-wehn-wrods-get-rearearngd) and brainstorming the answer with my girlfriend. The challenge is is:
+A couple weeks ago, I was looking at the [NPR Sunday Puzzle](http://www.npr.org/2017/07/16/537225382/sunday-puzzle-wehn-wrods-get-rearearngd) and brainstorming the answer with my girlfriend. The challenge is:
 
 > Name a U.S. city and its state — 12 letters altogether. Change two letters in the state's name. The result will be the two-word title of a classic novel. What is it?
 
@@ -64,7 +64,7 @@ def word_to_state(word):
 	return False
 ```
 
-After writing this function, the rest was simple. We simply iterate over our list of books from OpenLibrary, check to see if it meets the initial (non-state) criteria, then pass the state through our function and return the results.
+After writing this function, the rest was simple. We simply iterate over our list of books from OpenLibrary, check to see if each book meets the initial (non-state) criteria, then pass the state through our function and return the results.
 
 ```python
 # Iterate over every book in the file
@@ -84,7 +84,7 @@ for book in books:
 				print(book, word_to_state(second_word))
 ```
 
-After cleaning up the OpenLibrary works dump a bit, I used with this script. A few seconds later, the results were in! Possible titles were:
+After cleaning up the OpenLibrary works dump a bit, I used it as input for the script. A few seconds later, the results were in! Possible titles were:
 
 ```
 TODO
@@ -96,4 +96,18 @@ After submitting our answer, we waited patiently until the next week for the res
 
 ## What's next
 
-Let's be real, `word_to_state` isn't exactly an efficient function. I made it as verbose as possible to try and help my girlfriend who's learning to code understand it. Really most of the function could be replaced with a simple `set` comparison - but that's an improvement for another day.
+Let's be real, `word_to_state` isn't exactly an efficient function. I made it as verbose as possible to try and help my girlfriend who's learning to code understand it. Here's a quick improvement:
+
+```python
+def word_to_state(word):
+	states = ['Alaska', 'Alabama', 'Arkansas', 'American Samoa', 'Arizona', 'California', 'Colorado', 'Connecticut', 'District of Columbia', 'Delaware', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Iowa', 'Idaho', 'Illinois', 'Indiana', 'Kansas', 'Kentucky', 'Louisiana', 'Massachusetts', 'Maryland', 'Maine', 'Michigan', 'Minnesota', 'Missouri', 'Northern Mariana Islands', 'Mississippi', 'Montana', 'National', 'North Carolina', 'North Dakota', 'Nebraska', 'New Hampshire', 'New Jersey', 'New Mexico', 'Nevada', 'New York', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Virginia', 'Virgin Islands', 'Vermont', 'Washington', 'Wisconsin', 'West Virginia', 'Wyoming']
+	for state in states:
+		if len(word) == len(state):
+			word, state = word.lower(), state.lower()
+			changed_characters = [letter for index, letter in enumerate(word) if state[index] != letter]
+			if len(changed_characters) == 2:
+				return state.title()
+	return False
+```
+
+I initially thought set comparisons would be the way to go, but for this challenge, **the order of the letters matters**. The challenge answer of Onegin would've failed using set comparisons, because we're changing the letter 'r' to a letter that's already in the word 'Oregon'. While there are definitely improvments to be made, those are for another day.
