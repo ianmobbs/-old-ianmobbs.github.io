@@ -13,7 +13,7 @@ tags:
 
 ## Inspiration
 
-A couple weeks ago, I was looking at the [NPR Sunday Puzzle](http://www.npr.org/2017/07/16/537225382/sunday-puzzle-wehn-wrods-get-rearearngd) and brainstorming the answer with my girlfriend. The challenge is:
+A couple weeks ago, I was looking at the [NPR Sunday Puzzle](http://www.npr.org/2017/07/16/537225382/sunday-puzzle-wehn-wrods-get-rearearngd) and brainstorming the answer with my girlfriend. The puzzle is:
 
 > Name a U.S. city and its state — 12 letters altogether. Change two letters in the state's name. The result will be the two-word title of a classic novel. What is it?
 
@@ -111,8 +111,6 @@ for book in potential_books:
 	if results is not None:
 		print(title + ' - ' + city + ', ' + state)
 ```
-<sup>Note: `pyzipcode` accepts a state abbreviation, not just a state, so I did do some preprocessing that isn't shown here</sup>
-
 This led to this (much more reasonable) output:
 
 ```
@@ -148,4 +146,4 @@ def word_to_state(word):
 	return False
 ```
 
-I initially thought set comparisons would be the way to go, but for this challenge, **the order of the letters matters**. The challenge answer of Onegin would've failed using set comparisons, because we're changing the letter 'r' to a letter that's already in the word 'Oregon'. While there are definitely improvments to be made, those are for another day. In retrospect, my initial function didn't even handle this properly - just look at some of the output! Fortunately, I was working on such a small scale it didn't matter too much.
+I initially thought set comparisons would be the way to go, but for this challenge, **the order of the letters matters**. The challenge answer of Onegin would've failed using set comparisons, because we're changing the letter 'r' to a letter that's already in the word 'Oregon'. While there are definitely improvements to be made, those are for another day. In retrospect, my initial function didn't even handle this properly - just look at some of the output! Fortunately, I was working on such a small scale it didn't matter too much.
