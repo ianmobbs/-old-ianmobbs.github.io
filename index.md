@@ -12,8 +12,8 @@ B.B.A., May 2018
 
 ## Experience
 
-**Lower48 Analytics — Software Developer**   
-September 2017 - Present
+**Lower48 Analytics — Software Developer**  
+September 2017 - Present  
 
 **Capital One — Software Engineering Intern**  
 June 2017 - August 2017  
