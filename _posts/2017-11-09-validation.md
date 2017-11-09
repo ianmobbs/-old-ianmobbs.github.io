@@ -16,8 +16,8 @@ The idea was to create a daily standup coordinator that let you check in at any 
 
 So, I set about validating it. I found some stock art from [The Noun Project](https://thenounproject.com/term/desk/11680/) and made a [Facebook page](http://facebook.com/standbyapp). Then I bought a Facebook ad. Facebook offers an ad type called "Lead Generation", that encourages people to fill out a form for you (typically full name and email). I set up some targeting, filled out the text I wanted displayed, and hit submit. Now we wait!
 
+<img src="https://i.imgur.com/qPQNkFm.png" alt="Drawing" style="width: 300px; display:block; margin-left: auto; margin-right: auto;"/>
+
 It's been less than 24 hours and I've already reached 257 people, with 272 impressions. However I've gotten 0 emails out of this. This was all the validation I needed to realize that while this project may have a place in the world, it certainly isn't the million-dollar idea I thought it was originally. The best part of this is that it only cost me $1.12 and around half an hour of my time to validate my idea.
 
 Now, that's not to say that this idea is *completely* dead. Maybe my targeting was off. Maybe I didn't describe the product well enough in the ad. Maybe since I didn't have a website, people were hesitant to give me their information. There's a plethora of things that I could've changed that might have given me better results! But if you can't find your market, how are you ever going to make sales?
-
-![](https://i.imgur.com/qPQNkFm.png)
