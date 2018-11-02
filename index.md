@@ -13,7 +13,7 @@ B.B.A., May 2018
 ## Experience
 
 **Qualtrics - Software Engineer**  
-July 2018
+July 2018 - Present
 
 **Capital One — Software Engineering Intern**  
 June 2017 - August 2017  
