@@ -3,7 +3,7 @@ author: Ian Mobbs
 encoding: utf-8
 
 permalink: /projects/:title
-url: "http://ianmobbs.com"
+url: "https://ianmobbs.com"
 baseurl: ""
 
 sass:
